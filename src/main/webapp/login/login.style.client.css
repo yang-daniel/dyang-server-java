@@ -5,3 +5,11 @@
 .color-blue {
     color:cornflowerblue;
 }
+
+.sign-up {
+    float: right;
+}
+
+.forgot-password {
+    float: left;
+}
