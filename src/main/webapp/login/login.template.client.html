@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,39 +9,49 @@
 </head>
 <body>
 
-<div class="container">
-    <h1 class="color-blue">
-        Sign In
-    </h1>
-
-    <p class="color-blue">
-        <label for="username">
-            Username
-        </label>
-        <input class="form-control" id="username" placeholder="Enter your username here!"/>
-    </p>
-
-    <p class="color-blue">
-        <label for="password">
-            Password
-        </label>
-        <input class="form-control" type="password" id="password" placeholder="*************"/>
-    </p>
-
-    <p>
-        <button class="btn btn-primary btn-block">
+<form>
+    <div class="container">
+        <h1 class="color-blue">
             Sign In
-        </button>
-    </p>
+        </h1>
 
-    <a class="forgot-password">
-        Forgot Password
-    </a>
+        <div class="color-blue form-group row">
+            <label for="username" class="col-sm-2 col-form-label">
+                Username
+            </label>
+            <div class="col-sm-10">
+                <input class="form-control" id="username"
+                       placeholder="Enter your username here!"/>
+            </div>
+        </div>
 
-    <a class="sign-up">
-        Sign Up
-    </a>
-</div>
+        <div class="color-blue form-group row">
+            <label for="password" class="col-sm-2 col-form-label">
+                Password
+            </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="password" id="password"
+                       placeholder="*************"/>
+            </div>
 
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <button class="btn btn-primary btn-block">Sign in</button>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="../register/register.template.client.html"
+                           class="float-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 </body>
 </html>
