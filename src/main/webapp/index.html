@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link href="./styles.css" rel="stylesheet"/>
     <meta charset="UTF-8">
-    <title>WebDev</title>
+    <title>Index</title>
 </head>
 <body>
+<div class="container-fluid ">
+    <h1 class="index-header mt-2 ml-2">
+        Welcome to WebDev!!!
+    </h1>
 
-<h1>
-    Welcome to WebDev!!!
-</h1>
+    <p class="ml-2">
+        This is the landing page for the
+        WedDev course
+    </p>
 
-<p>
-    This is the landing page for the
-    WedDev course
-</p>
+    <ul class="list-group"> <!-- unordered list -->
+        <li class="list-group-item">
+            <button type="button" class="btn btn-light">
+                <a href="login/login.template.client.html">
+                    Login Page
+                </a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-light">
+                <a href="profile/profile.template.client.html">
+                    Profile Screen
+                </a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-light">
+                <a href="register/register.template.client.html">
+                    Register
+                </a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-light">
+                <a href="editor/editor.template.client.html">
+                    Editor
+                </a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-light">
+                <a href="dashboard/dashboard.template.client.html">
+                    Dashboard/Course Manager
+                </a>
+            </button>
+        </li>
+    </ul>
+</div>
 
-<ul> <!-- unordered list -->
-    <li>
-        <a href="login/login.template.client.html">
-            Login Page
-        </a>
-    </li>
-    <li>
-        <a href="profile/profile.template.client.html">
-            Profile Screen
-        </a>
-    </li>
-    <li>
-        <a href="editor/editor.template.client.html">
-            Editor
-        </a>
-    </li>
-    <li>
-        <a href="dashboard/dashboard.template.client.html">
-            Dashboard/Course Manager
-        </a>
-    </li>
-</ul>
 </body>
 </html>
