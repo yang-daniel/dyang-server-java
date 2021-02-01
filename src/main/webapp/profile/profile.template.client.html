@@ -12,7 +12,7 @@
   <h1>Profile</h1>
 
   <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
+    Changes successfully updated!
   </div>
 
 <!--  <div class="alert alert-danger" role="alert">-->
@@ -29,7 +29,8 @@
              placeholder="username123"
              readonly
              class="form-control"
-             id="username">
+             id="username"
+             title="Your username can't be changed">
     </div>
   </div>
 
@@ -43,7 +44,8 @@
              class="form-control"
              title="Please enter your phone number"
              placeholder="(555)-555-5555"
-             id="inputPhone">
+             id="inputPhone"
+             title="Please enter your phone number">
     </div>
   </div>
 
@@ -56,7 +58,8 @@
       <input type="email"
              class="form-control"
              title="Please enter your email"
-             id="email">
+             id="email"
+             title="Please enter your email">
     </div>
   </div>
 
@@ -67,7 +70,8 @@
     </label>
     <div class="col-sm-10">
       <select id="role"
-              class="form-control">
+              class="form-control"
+              title="Select your role">
         <option>Faculty</option>
         <option>Student</option>
         <option>Admin</option>
@@ -84,13 +88,14 @@
       <input type="date"
              value="2021-1-28"
              class="form-control"
-             id="dob">
+             id="dob"
+             title="Please enter your date of birth">
     </div>
   </div>
 
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label"> </label>
-    <div class="col-sm-10 mb-3">
+    <div class="col-sm-10 mb-2">
       <a class="btn btn-success btn-block"
          href="#">
         Update
