@@ -23,20 +23,18 @@ function createUser() {
     lastname: $lastNameFld.val(),
     role: $roleFld.val()
   }
-
-  userService.createUser(newUser)
-  .then(function (actualUser) {
-    users.push(actualUser)
+  userService.createUser(newUser).then(function (realUser) {
+    users.push(realUser)
     renderUsers(users)
   })
+  clearForm();
 }
 
 function deleteUser(event) {
   var button = $(event.target)
   var index = button.attr("id")
   var id = users[index]._id
-  userService.deleteUser(id)
-  .then(function (status) {
+  userService.deleteUser(id).then(function (status) {
     users.splice(index, 1)
     renderUsers(users)
   })
@@ -60,11 +58,11 @@ function updateUser() {
   selectedUser.firstname = $firstNameFld.val()
   selectedUser.lastname = $lastNameFld.val()
   selectedUser.role = $roleFld.val()
-  userService.updateUser(selectedUser._id, selectedUser)
-  .then(status => {
+  userService.updateUser(selectedUser._id, selectedUser).then(status => {
     var index = users.findIndex(user => user._id === selectedUser._id)
     users[index] = selectedUser
     renderUsers(users)
+    clearForm();
   })
 }
 
@@ -73,25 +71,35 @@ function renderUsers(users) {
   for(var i=0; i<users.length; i++) {
     var user = users[i]
     $userRowTemplate
-    .prepend(`<tr>
+    .prepend(`
+      <tr>
           <td>${user.username}</td>
           <td class="hidetext user-${i}-pwd">${user.password}</td>
           <td>${user.firstname}</td>
           <td>${user.lastname}</td>
           <td>${user.role}</td>
           <td>
-            <i class="fas fa-times fa-2x wbdv-delete-btn" id="${i}" ></i>
+            <i class="fas fa-trash fa-2x wbdv-delete-btn" id="${i}" ></i>
             <i class="fas fa-pencil-alt fa-2x wbdv-select-btn" id="${user._id}"></i>
           </td>
-      </tr> `)
+      </tr> 
+     `)
   }
 
   $(".wbdv-delete-btn").click(deleteUser)
   $(".wbdv-select-btn").click(selectUser)
 }
 
+function clearForm() {
+  $usernameFld.val('')
+  $passwordFld.val('')
+  $firstNameFld.val('')
+  $lastNameFld.val('')
+  $roleFld.val('')
+}
+
 function main() {
-  $userRowTemplate = jQuery("#table-rows")
+  $userRowTemplate = $("#table-rows")
   $createBtn = $(".wbdv-create-btn")
   $editBtn = $(".wbdv-edit-btn")
 
