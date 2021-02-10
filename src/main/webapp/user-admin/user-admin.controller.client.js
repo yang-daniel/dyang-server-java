@@ -95,7 +95,6 @@ function clearForm() {
   $passwordFld.val('')
   $firstNameFld.val('')
   $lastNameFld.val('')
-  $roleFld.val('')
 }
 
 function main() {
